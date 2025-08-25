@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Sticky header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #111;
+  color: #fff;
+  padding: 1rem 2rem; /* extra horizontal padding */
+  z-index: 1000;
+  text-align: left;   /* align nav to the left */
+}
+
+header nav {
+  display: inline-block; /* keeps links grouped neatly */
+}
+
+header nav a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  color: #00ffcc;
+}
+
+/* Push content down so it's not hidden under header */
+.content {
+  padding-top: 80px;
+}
+
+section {
+  height: 100vh; /* full screen height */
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  text-align: center;
+  padding: 2rem;
+}
+
+section:nth-child(odd) {
+  background: #222;
+  color: #fff;
+}
+
+section:nth-child(even) {
+  background: #eee;
+  color: #111;
+}
+
+/* Limit content width */
+.container {
+  max-width: 1000px;   /* you can adjust (e.g. 900px, 1200px) */
+  margin: 0 auto;      /* centers it horizontally */
+  padding: 0 2rem;     /* adds breathing room on left/right */
+}
+
+/* Sections still full height */
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0; /* top/bottom padding only (left/right handled by container) */
+}
+
+/* Layout: space between logo + icons */
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Icons */
+header nav a {
+  color: #fff;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;  /* adjust size */
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: #00ffcc; /* hover effect */
+}
+
+/* Resume button */
+.resume-btn {
+  border: 1px solid #ffb6c1;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ffb6c1;
+}
+
+.resume-btn:hover {
+  background: #ffb6c1;
+  color: #111;
+}
