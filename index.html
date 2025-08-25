@@ -13,7 +13,7 @@
 
     <header>
         <div class="container header-flex">
-            <h1 class="logo">Leo Esguerra</h1>
+            <h1>Leo Esguerra</h1>
             <nav>
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
@@ -31,35 +31,120 @@
         <div class="container">
             <section id="about">
                 <div>
-                    <h1>About Me</h1>
-                    <p>Game developer specializing in Unreal Engine and interactive storytelling.</p>
+                    <p>Game programmer specializing in systems and gameplay programming, focused on writing efficient, clean code and tackling new challenges in game development.</p>
                 </div>
             </section>
 
             <section id="projects">
-                <h1>Projects</h1>
-
-                <div class="project-carousel">
-                    <!-- Main display -->
-                    <div class="main-display">
-                        <video class="project-video" loop muted playsinline>
-                            <source src="media/project1_1.mp4" type="video/mp4">
-                        </video>
-                        <img src="media/project_1_2.png" alt="Project 1" class="active">
+                <div class="projects-container">
+                <div class="project-showcase">
+                    <div class="project-carousel">
+                        <!-- Main display -->
+                        <div class="main-display">
+                            <video class="project-video" loop muted playsinline controls>
+                                <source src="media/project1_1.mp4" type="video/mp4">
+                            </video>
+                            <img src="media/project_1_2.png" alt="Project 1" class="active">
+                        </div>
+                        <!-- Thumbnails -->
+                        <div class="thumbnails">
+                        <!-- Video thumbnail - will show video when clicked -->
+                        <img src="media/project_1_thumbnail.jpg" class="thumbnail active" 
+                             data-index="0" 
+                             data-video="media/project1_1.mp4" 
+                             data-type="video"
+                             data-title="Bros Before Bones"
+                             data-description="Watch the core gameplay mechanics in action. This video showcases the player movement system, combat mechanics, and environmental interactions built in Unreal Engine."
+                             data-tech="Unreal Engine, C++, Blueprints">
+                        <!-- Screenshot thumbnail - will show image when clicked -->
+                        <img src="media/project_1_2.png" class="thumbnail" 
+                             data-index="1" 
+                             data-image="media/project_1_2.png" 
+                             data-type="image"
+                             data-title="Level Design Screenshot"
+                             data-description="This screenshot shows the detailed environment design and lighting setup. The level features dynamic weather systems and interactive elements that respond to player actions."
+                             data-tech="Unreal Engine, World Composition, Lighting">
+                        <img src="media/project_1_2.png" class="thumbnail" 
+                             data-index="1" 
+                             data-image="media/project_1_2.png" 
+                             data-type="image"
+                             data-title="Level Design Screenshot"
+                             data-description="This screenshot shows the detailed environment design and lighting setup. The level features dynamic weather systems and interactive elements that respond to player actions."
+                             data-tech="Unreal Engine, World Composition, Lighting">
+                        <img src="media/project_1_2.png" class="thumbnail" 
+                             data-index="1" 
+                             data-image="media/project_1_2.png" 
+                             data-type="image"
+                             data-title="Level Design Screenshot"
+                             data-description="This screenshot shows the detailed environment design and lighting setup. The level features dynamic weather systems and interactive elements that respond to player actions."
+                             data-tech="Unreal Engine, World Composition, Lighting">
+                        </div> 
                     </div>
-                    <!-- Thumbnails -->
-                    <div class="thumbnails">
-                    <!-- Video thumbnail - will show video when clicked -->
-                    <img src="media/project_1_thumbnail.jpg" class="thumbnail active" 
-                         data-index="0" 
-                         data-video="media/project1_1.mp4" 
-                         data-type="video">
-                    
-                    <!-- Screenshot thumbnail - will show image when clicked -->
-                    <img src="media/project_1_2.png" class="thumbnail" 
-                         data-index="1" 
-                         data-image="media/project_1_2.png" 
-                         data-type="image">
+                    <div class="project-description">
+                        <div class="description-content">
+                            <h3 class="description-title">Bros Before Bones</h3>
+                            <div class="tech-stack">
+                                <span class="tech-tags">Unreal Engine, C++, Blueprints</span>
+                            </div>
+                            <p class="description-text">Watch the core gameplay mechanics in action. This video showcases the player movement system, combat mechanics, and environmental interactions built in Unreal Engine.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Project -->
+                <div class="project-showcase">
+                    <div class="project-carousel">
+                        <!-- Main display -->
+                        <div class="main-display">
+                            <video class="project-video" loop muted playsinline controls>
+                                <source src="media/project1_1.mp4" type="video/mp4">
+                            </video>
+                            <img src="media/project_1_2.png" alt="Project 2" class="active">
+                        </div>
+                        <!-- Thumbnails -->
+                        <div class="thumbnails">
+                        <!-- Video thumbnail - will show video when clicked -->
+                        <img src="media/project_1_thumbnail.jpg" class="thumbnail active" 
+                             data-index="0" 
+                             data-video="media/project1_1.mp4" 
+                             data-type="video"
+                             data-title="Second Game Project"
+                             data-description="Another exciting game project showcasing different mechanics and systems. This project demonstrates advanced AI behavior, procedural generation, and multiplayer networking capabilities."
+                             data-tech="Unity, C#, Photon">
+                        <!-- Screenshot thumbnail - will show image when clicked -->
+                        <img src="media/project_1_2.png" class="thumbnail" 
+                             data-index="1" 
+                             data-image="media/project_1_2.png" 
+                             data-type="image"
+                             data-title="UI Design Screenshot"
+                             data-description="This screenshot showcases the user interface design and HUD elements. Features include dynamic health bars, inventory systems, and interactive menus with smooth animations."
+                             data-tech="Unity, UI Toolkit, Animation">
+                        <img src="media/project_1_2.png" class="thumbnail" 
+                             data-index="2" 
+                             data-image="media/project_1_2.png" 
+                             data-type="image"
+                             data-title="Multiplayer Screenshot"
+                             data-description="Demonstrates the multiplayer functionality with multiple players interacting in real-time. Shows synchronized animations, network prediction, and lag compensation techniques."
+                             data-tech="Photon, C#, Networking">
+                        </div> 
+                    </div>
+                    <div class="project-description">
+                        <div class="description-content">
+                            <h3 class="description-title">Second Game Project</h3>
+                            <div class="tech-stack">
+                                <span class="tech-tags">Unity, C#, Photon</span>
+                            </div>
+                            <p class="description-text">Another exciting game project showcasing different mechanics and systems. This project demonstrates advanced AI behavior, procedural generation, and multiplayer networking capabilities.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">View on GitHub</a>
+                                <a href="#" class="project-link">Play Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </section>
             <section id="contact">

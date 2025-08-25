@@ -1,6 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background: #1a1a1a;
+  color: #fff;
 }
 
 /* Sticky header */
@@ -11,7 +13,7 @@ header {
   width: 100%;
   background: #111;
   color: #fff;
-  padding: 1rem 2rem; /* extra horizontal padding */
+  padding: 2rem 2rem; /* increased vertical padding for more height */
   z-index: 1000;
 }
 
@@ -22,11 +24,19 @@ header {
   align-items: center;
 }
 
+/* Name/Logo styling */
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: bold;
+  color: #fff;
+}
+
 /* Nav links & icons */
 header nav a {
   color: #fff;
   margin: 0 0.8rem;
-  font-size: 1.4rem;  /* controls icon/text size */
+  font-size: 1.4rem;  /* normal size for text links */
   text-decoration: none;
   font-weight: bold;
 }
@@ -37,14 +47,15 @@ header nav a:hover {
 
 header nav a i {
   color: #00fff7; /* light pink */
+  font-size: 2rem; /* larger size only for icons */
 }
 header nav a i:hover {
-  color: #0073ff; /* cyan on hover */
+  color: #ffb6c1; /* light pink on hover */
 }
 
 /* Push content down so it's not hidden under header */
 .content {
-  padding-top: 80px;
+  padding-top: 120px; /* increased to accommodate taller header */
 }
 
 /* Limit content width */
@@ -71,6 +82,19 @@ section:nth-child(odd) {
 section:nth-child(even) {
   background: #eee;
   color: #111;
+}
+
+/* Override for projects section - make it dark */
+#projects {
+  background: #111 !important;
+  color: #fff !important;
+}
+
+/* Add padding to About section paragraph */
+#about p {
+  padding: 20px 40px;
+  line-height: 1.6;
+  font-size: xx-large;
 }
 
 /* Resume button */
@@ -173,18 +197,115 @@ section:nth-child(even) {
   transition: opacity 0.3s ease;
 }
 
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.project-showcase {
+  display: flex;
+  gap: 0px;
+  align-items: flex-start;
+  margin: 2rem 0;
+  width: 100%;
+}
+
 .project-carousel {
-  width: 80%;
-  margin: 2rem auto;
+  flex: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 0; /* Allow flex item to shrink */
+  width: 100%;
+}
+
+.project-description {
+  flex: 1;
+  min-width: 100px;
+  padding: 20px;
+}
+
+.description-content {
+  color: #fff;
+  text-align: left;
+}
+
+.description-title {
+  margin: 0 0 15px 0;
+  color: #00ffcc;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.description-text {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+  text-align: left;
+}
+
+.tech-stack {
+  margin-bottom: 20px;
+}
+
+.tech-stack h4 {
+  margin: 0 0 8px 0;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.tech-tags {
+  display: inline-block;
+  background: linear-gradient(45deg, #00ffcc, #0073ff);
+  color: #111;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.project-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 8px 16px;
+  background: transparent;
+  border: 2px solid #00ffcc;
+  color: #00ffcc;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  background: #00ffcc;
+  color: #111;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .project-showcase {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .project-description {
+    min-width: auto;
+    width: 50%;
+  }
 }
 
 .main-display {
   width: 100%;
-  max-width: 800px;
-  height: 450px;
+  max-width: 600px;
+  height: 350px;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
@@ -195,7 +316,7 @@ section:nth-child(even) {
 .main-display video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   position: absolute;
   top: 0;
   left: 0;
@@ -204,6 +325,15 @@ section:nth-child(even) {
 .main-display video {
   opacity: 0;
   transition: opacity 0.3s ease;
+}
+
+/* Ensure video controls are visible when they exist */
+.main-display video[controls] {
+  cursor: default;
+}
+
+.main-display video:not([controls]) {
+  cursor: pointer;
 }
 
 .main-display img.active {
@@ -215,6 +345,9 @@ section:nth-child(even) {
   gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 600px;
+  padding: 10px 0;
 }
 
 .thumbnails img {
