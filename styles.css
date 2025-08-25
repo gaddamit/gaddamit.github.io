@@ -13,16 +13,20 @@ header {
   color: #fff;
   padding: 1rem 2rem; /* extra horizontal padding */
   z-index: 1000;
-  text-align: left;   /* align nav to the left */
 }
 
-header nav {
-  display: inline-block; /* keeps links grouped neatly */
+/* Flex layout for header */
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+/* Nav links & icons */
 header nav a {
   color: #fff;
-  margin: 0 1rem;
+  margin: 0 0.8rem;
+  font-size: 1.4rem;  /* controls icon/text size */
   text-decoration: none;
   font-weight: bold;
 }
@@ -31,18 +35,32 @@ header nav a:hover {
   color: #00ffcc;
 }
 
+header nav a i {
+  color: #00fff7; /* light pink */
+}
+header nav a i:hover {
+  color: #0073ff; /* cyan on hover */
+}
+
 /* Push content down so it's not hidden under header */
 .content {
   padding-top: 80px;
 }
 
+/* Limit content width */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;       /* centers content */
+  padding: 0 2rem;      /* breathing room */
+}
+
+/* Section styling */
 section {
-  height: 100vh; /* full screen height */
   display: flex;
-  justify-content: center; /* horizontal */
-  align-items: center;     /* vertical */
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 section:nth-child(odd) {
@@ -53,42 +71,6 @@ section:nth-child(odd) {
 section:nth-child(even) {
   background: #eee;
   color: #111;
-}
-
-/* Limit content width */
-.container {
-  max-width: 1000px;   /* you can adjust (e.g. 900px, 1200px) */
-  margin: 0 auto;      /* centers it horizontally */
-  padding: 0 2rem;     /* adds breathing room on left/right */
-}
-
-/* Sections still full height */
-section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem 0; /* top/bottom padding only (left/right handled by container) */
-}
-
-/* Layout: space between logo + icons */
-.header-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Icons */
-header nav a {
-  color: #fff;
-  margin: 0 0.5rem;
-  font-size: 1.2rem;  /* adjust size */
-  text-decoration: none;
-}
-
-header nav a:hover {
-  color: #00ffcc; /* hover effect */
 }
 
 /* Resume button */
@@ -104,4 +86,185 @@ header nav a:hover {
 .resume-btn:hover {
   background: #ffb6c1;
   color: #111;
+}
+
+.projects-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-slide img,
+.carousel-slide video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Navigation buttons */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.project-gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-item {
+  position: relative;
+  width: 300px;
+  height: 170px;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.project-item img.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.project-item video.project-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.project-carousel {
+  width: 80%;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-display {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.main-display img,
+.main-display video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main-display video {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.main-display img.active {
+  opacity: 1;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.thumbnails img {
+  width: 120px;
+  height: 70px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.thumbnails img.active {
+  border-color: #00ffcc;
+}
+
+.thumbnails img:hover {
+  transform: scale(1.05);
+}
+
+/* Add video play icon overlay for video thumbnails */
+.thumbnails img[data-type="video"]::after {
+  content: '▶';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+/* Add image icon overlay for image thumbnails */
+.thumbnails img[data-type="image"]::before {
+  content: '🖼';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-size: 12px;
+  opacity: 0.8;
 }

@@ -7,12 +7,13 @@
     <!-- Link external CSS -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="carousel.js"></script>
 </head>
 <body>
 
     <header>
         <div class="container header-flex">
-            <h1 class="logo">Your Name</h1>
+            <h1 class="logo">Leo Esguerra</h1>
             <nav>
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
@@ -36,12 +37,31 @@
             </section>
 
             <section id="projects">
-                <div>
-                    <h1>Projects</h1>
-                    <p>Here are some of my works...</p>
+                <h1>Projects</h1>
+
+                <div class="project-carousel">
+                    <!-- Main display -->
+                    <div class="main-display">
+                        <video class="project-video" loop muted playsinline>
+                            <source src="media/project1_1.mp4" type="video/mp4">
+                        </video>
+                        <img src="media/project_1_2.png" alt="Project 1" class="active">
+                    </div>
+                    <!-- Thumbnails -->
+                    <div class="thumbnails">
+                    <!-- Video thumbnail - will show video when clicked -->
+                    <img src="media/project_1_thumbnail.jpg" class="thumbnail active" 
+                         data-index="0" 
+                         data-video="media/project1_1.mp4" 
+                         data-type="video">
+                    
+                    <!-- Screenshot thumbnail - will show image when clicked -->
+                    <img src="media/project_1_2.png" class="thumbnail" 
+                         data-index="1" 
+                         data-image="media/project_1_2.png" 
+                         data-type="image">
                 </div>
             </section>
-
             <section id="contact">
                 <div>
                     <h1>Contact</h1>
