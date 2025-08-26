@@ -26,17 +26,17 @@ header {
 
 /* Name/Logo styling */
 header h1 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   margin: 0;
   font-weight: bold;
-  color: #fff;
+  color: #e1e1e1;
 }
 
 /* Nav links & icons */
 header nav a {
-  color: #fff;
+  color: #d8d8d8;
   margin: 0 0.8rem;
-  font-size: 1.4rem;  /* normal size for text links */
+  font-size: 1.rem;  /* normal size for text links */
   text-decoration: none;
   font-weight: bold;
 }
@@ -95,6 +95,7 @@ section:nth-child(even) {
   padding: 20px 40px;
   line-height: 1.6;
   font-size: xx-large;
+  color: #a0a0a0;
 }
 
 /* Resume button */
