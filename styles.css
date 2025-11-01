@@ -425,12 +425,10 @@ section:nth-child(even) {
 }
 
 /* Showcase video section */
-.showcase-video {
+.showcase-video video {
     width: 100%;
-    padding: 0;
-    margin: 0 auto;
-    position: relative;
-    background: #000; /* optional fade behind video */
+    height: auto;
+    display: block;
 }
 
 .video-wrapper {
