@@ -403,27 +403,6 @@ section:nth-child(even) {
   opacity: 0.8;
 }
 
-.video-background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: -1;
-    }
-
-/* Responsive iframe to cover entire background */
-.video-background iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120%;
-  height: 120%;
-  transform: translate(-50%, -50%);
-  pointer-events: none; /* prevents clicking */
-}
-
 /* Make the video section take full width */
 .showcase-video {
     width: 100%;
