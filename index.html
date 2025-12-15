@@ -1,64 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Leo Esguerra</title>
     <!-- Link external CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="media/letter-l.png" type="image/png" />
     <script src="carousel.js"></script>
-</head>
-<body>
-
+  </head>
+  <body>
     <header>
-        <div class="container header-flex">
-            <h1>Leo Esguerra</h1>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="media/Leo_Esguerra_Resume.pdf" download="Leo_Esguerra_Resume.pdf">Resume</a>
-            </nav>
-            <nav>
-                <a href="https://www.linkedin.com/in/leoesguerra" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/gaddamit" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://gaddamit.itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>
-                <a href="mailto:leo.esguerra@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-            </nav>
-        </div>
+      <div class="container header-flex">
+        <h1><a href="#">Leo Esguerra</a></h1>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a
+            href="media/Leo_Esguerra_Resume.pdf"
+            download="Leo_Esguerra_Resume.pdf"
+            >Resume</a
+          >
+        </nav>
+        <nav>
+          <a href="https://www.linkedin.com/in/leoesguerra" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/gaddamit" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://gaddamit.itch.io" target="_blank"
+            ><i class="fab fa-itch-io"></i
+          ></a>
+          <a href="mailto:leo.esguerra@gmail.com" target="_blank"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </nav>
+      </div>
     </header>
     <!-- Showcase Video Section -->
     <div class="showcase-video">
-        <section id="showcase-video">
-            <video autoplay muted loop>
-                <source src="media/DemoReel.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <a
-                href="https://www.youtube.com/watch?v=62GXX0i0mGI"
-                target="_blank"
-                class="video-click-overlay"
-                aria-label="Watch demo reel on YouTube"
-            ></a>
-            <!-- Text overlay -->
-            <div class="video-text">
-                <p>Game programmer with expertise in systems, AI, and gameplay programming, finds fun in solving complex development challenges.</p>
-            </div>
-        </section>
-    </div>
-    <!--
-    <div class="content">
-        <div class="container">
-            <section id="contact">
-                <div>
-                    <h1>Contact</h1>
-                    <p>Get in touch: email@domain.com</p>
-                </div>
-            </section>
+      <section id="showcase-video">
+        <video autoplay muted loop>
+          <source src="media/DemoReel.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <a
+          href="https://www.youtube.com/watch?v=62GXX0i0mGI"
+          target="_blank"
+          d
+          class="video-click-overlay"
+          aria-label="Watch demo reel on YouTube"
+        ></a>
+        <!-- Text overlay -->
+        <div class="video-text">
+          <p>
+            Game programmer with expertise in gameplay, systems and AI, finds
+            fun in solving complex development challenges.
+          </p>
         </div>
-    </div>-->
-</body>
+      </section>
+    </div>
+    <div class="content">
+      <div class="container">
+        <section id="about">
+          <div>
+            <p>
+              Hi, I’m Leo, a game programmer based in Calgary. I recently
+              completed my Advanced Game Development diploma, where I designed
+              and built games both solo and in collaborative teams. I have
+              experience developing for mobile and desktop platforms, and I
+              enjoy creating gameplay experiences that are both engaging and
+              well-crafted.
+            </p>
+            <p>
+              Technical Experience: C++, C#, Unity, Unreal Engine, Unreal
+              Blueprints, Python, Git
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="content">
+      <div class="container">
+        <section id="projects" class="projects-container">
+          <!-- Project 1 -->
+          <div class="project">
+            <div class="project-carousel">
+              <div class="projects-carousel" id="carousel1">
+                <div class="carousel-container">
+                  <div class="carousel-slide">
+                    <img
+                      src="media/project1/scr1.png"
+                      alt="Project 1 Screenshot 1"
+                    />
+                  </div>
+                  <div class="carousel-slide">
+                    <img
+                      src="media/project1/scr2.png"
+                      alt="Project 1 Screenshot 2"
+                    />
+                  </div>
+                  <div class="carousel-slide">
+                    <img
+                      src="media/project1/scr3.png"
+                      alt="Project 1 Screenshot 3"
+                    />
+                  </div>
+                  <div class="carousel-slide">
+                    <img
+                      src="media/project1/scr4.png"
+                      alt="Project 1 Screenshot 4"
+                    />
+                  </div>
+                  <div class="carousel-slide">
+                    <img
+                      src="media/project1/scr5.png"
+                      alt="Project 1 Screenshot 5"
+                    />
+                  </div>
+                  <div class="carousel-slide">
+                    <img
+                      src="media/project1/scr6.png"
+                      alt="Project 1 Screenshot 6"
+                    />
+                  </div>
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Bros Before Bones</h3>
+              <p>
+                A 3D action-adventure, local co-op fantasy game where players can
+                control two characters. Players get to choose between four
+                character classes and switch during gameplay, each having unique abilities to help 
+                defeat the Skeleton army.
+              </p>
+              <p>Developed using Unreal Engine, with C++ and Blueprints.</p>
+              <p>
+                <a
+                  href="https://gaddamit.itch.io/bros-before-bones"
+                  target="_blank"
+                  ><i class="fab fa-itch-io"></i
+                ></a>
+              </p>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="project">
+            <div class="project-carousel">
+              <div class="projects-carousel" id="carousel1">
+                <div class="carousel-container">
+                  <div class="carousel-slide">
+                    <img
+                      src="media/project2/scr1.png"
+                      alt="Project 2 Screenshot 1"
+                    />
+                  </div>
+                  <div class="carousel-slide">
+                    <img
+                      src="media/project2/scr2.png"
+                      alt="Project 2 Screenshot 2"
+                    />
+                  </div>
+                  <div class="carousel-slide">
+                    <img
+                      src="media/project2/scr3.png"
+                      alt="Project 2 Screenshot 3"
+                    />
+                  </div>
+                  <div class="carousel-slide">
+                    <img
+                      src="media/project2/scr4.png"
+                      alt="Project 2 Screenshot 4"
+                    />
+                  </div>
+                  <div class="carousel-slide">
+                    <img
+                      src="media/project2/scr5.png"
+                      alt="Project 2 Screenshot 5"
+                    />
+                  </div>
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Moshpit Z</h3>
+              <p>
+                A top-down, wave-based zombie survival game where players fend
+                off hordes of the undead using a variety of weapons and
+                power-ups.
+              </p>
+              <p>
+                Developed using Unity and C#, with Playmaker for visual
+                scripting.
+              </p>
+              <p>
+                <a
+                  href="https://gaddamit.itch.io/moshpitz"
+                  target="_blank"
+                  ><i class="fab fa-itch-io"></i>
+                </a>
+                </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
 </html>
