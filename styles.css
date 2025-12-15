@@ -13,7 +13,7 @@ header {
   width: 100%;
   background: #111;
   color: #fff;
-  padding: 2rem 2rem; /* increased vertical padding for more height */
+  padding: 1.5rem 1.5rem; /* increased vertical padding for more height */
   z-index: 1000;
   font-family: 'Open Sans', sans-serif;
 }
@@ -36,7 +36,6 @@ header h1 {
 
 /* Nav links & icons */
 header nav a {
-
   font-family: 'Open Sans', sans-serif;
   color: #d8d8d8;
   margin: 0 0.8rem;
@@ -53,7 +52,7 @@ header nav a:hover {
 
 header nav a i {
   color: #ffffff; /* light pink */
-  font-size: 2rem; /* larger size only for icons */
+  font-size: 1.5rem; /* larger size only for icons */
 
     font-family: 'Open Sans', sans-serif;
 }
