@@ -1,6 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   background: #1a1a1a;
   color: #fff;
 }
@@ -13,9 +16,9 @@ header {
   width: 100%;
   background: #111;
   color: #fff;
-  padding: 1.5rem 1.5rem; /* increased vertical padding for more height */
+  padding: 1.5rem 0rem; /* increased vertical padding for more height */
   z-index: 1000;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* Flex layout for header */
@@ -31,7 +34,7 @@ header h1 {
   margin: 0;
   font-weight: bold;
   color: #1de9b6;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 header h1 a {
@@ -45,14 +48,14 @@ header h1 a:hover {
 
 /* Nav links & icons */
 header nav a {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #d8d8d8;
   margin: 0 0.8rem;
-  font-size: 1.rem;  /* normal size for text links */
+  font-size: 1rem; /* normal size for text links */
   text-decoration: none;
   font-weight: bold;
 
-    font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 header nav a:hover {
@@ -63,10 +66,14 @@ header nav a i {
   color: #ffffff; /* light pink */
   font-size: 1.5rem; /* larger size only for icons */
 
-    font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 header nav a i:hover {
   color: #1de9b6; /* light pink on hover */
+}
+
+.header-spacer {
+  height: 0px; /* same as header height */
 }
 
 /* Push content down so it's not hidden under header */
@@ -77,8 +84,8 @@ header nav a i:hover {
 /* Limit content width */
 .container {
   max-width: 1000px;
-  margin: 0 auto;       /* centers content */
-  padding: 0 2rem;      /* breathing room */
+  margin: 0 auto; /* centers content */
+  padding: 0 2rem; /* breathing room */
 }
 
 /* Section styling */
@@ -90,22 +97,19 @@ section {
   padding: 2rem 0;
 }
 
-
 #about {
-    width: 100vw;               /* full viewport width */
-    margin-left: calc(-50vw + 50%); /* remove container centering */
-    background-color: #292929;     /* your chosen background */
-    padding: 3rem 2rem;         /* spacing inside the section */
+  width: 100vw; /* full viewport width */
+  margin-left: calc(-50vw + 50%); /* remove container centering */
+  background-color: #292929; /* your chosen background */
 }
 
 /* Add padding to About section paragraph */
 #about p {
-  padding: 20px 40px;
   line-height: 1.6;
   font-size: x-large;
   color: #a0a0a0;
-  max-width: 1000px;           /* keep lines readable */
-  margin: 0 auto;  
+  max-width: 1000px; /* keep lines readable */
+  margin: 0 auto;
 }
 
 /* Resume button */
@@ -124,117 +128,107 @@ section {
 }
 
 .showcase-video {
-  padding-top: 90px; /* increased to accommodate taller header */
-    width: 100%;
-    height: 80vh; /* full viewport height */
-    display: flex;
-    justify-content: center; /* horizontal center */
-    align-items: center;     /* vertical center */
-    overflow: hidden;
-    position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
 }
 
-#showcase-video video {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    object-position: center top; /* align to top instead of center */
+.showcase-video video {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
 }
 
 .showcase-video::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* gradient from transparent at top to semi-black at bottom */
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%);
-    z-index: 1; /* behind text but above video */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* gradient from transparent at top to semi-black at bottom */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  z-index: 1; /* behind text but above video */
 }
 
 /* Text overlay */
 .video-text {
-    position: absolute;       /* position relative to container */
-    bottom: 5%;                 /* vertical center */
-    left: 50%;                /* horizontal center */
-    transform: translate(-50%); /* perfect centering */
-    color: #fff;
-    text-align: center;
-    z-index: 2;               /* above video */
-}
-
-/* Full clickable area */
-.video-click-overlay {
-    position: absolute;
-    inset: 0;              /* top/right/bottom/left = 0 */
-    z-index: 3;
-    cursor: pointer;
+  position: absolute; /* position relative to container */
+  bottom: 5%; /* vertical center */
+  left: 50%; /* horizontal center */
+  transform: translate(-50%); /* perfect centering */
+  color: #fff;
+  text-align: center;
+  z-index: 2; /* above video */
 }
 
 .video-click-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-    cursor: pointer;
-    background: rgba(0,0,0,0); /* initial transparent */
-    transition: background 0.3s ease; /* <-- smooth fade */
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0); /* initial transparent */
+  transition: background 0.3s ease; /* <-- smooth fade */
 }
 
 .video-click-overlay:hover {
-    background: rgba(0,0,0,0.15);
+  background: rgba(0, 0, 0, 0.5);
 }
-
 
 /* Optional: adjust font sizes */
 .video-text h1 {
-    font-size: 3rem;
-    margin: 0 0 10px 0;
+  font-size: 3rem;
+  margin: 0 0 10px 0;
 }
 
 .video-text p {
-    font-size: 2rem;
-    margin: 0;
+  font-size: 2rem;
+  margin: 0;
 }
 
 .projects-container {
-    display: flex;
-    flex-direction: column; /* stack projects vertically */
-    gap: 3rem;             /* spacing between projects */
-    width: 100%;
+  display: flex;
+  flex-direction: column; /* stack projects vertically */
+  gap: 3rem; /* spacing between projects */
+  width: 100%;
 }
 
 .project {
-    display: flex;
-    flex-direction: row; /* change from column to row */
-    align-items: flex-start; /* align carousel and text at the top */
-    gap: 2rem; /* space between carousel and text */
-    width: 100%;
-    flex-wrap: wrap; /* allows stacking on smaller screens */
+  display: flex;
+  flex-direction: row; /* change from column to row */
+  align-items: flex-start; /* align carousel and text at the top */
+  gap: 2rem; /* space between carousel and text */
+  width: 100%;
+  flex-wrap: wrap; /* allows stacking on smaller screens */
 }
 
 .project-carousel {
   position: relative;
-    flex: 1.5;               /* takes roughly half the width */
-    min-width: 400px;      /* prevent it from getting too small */
-    overflow: hidden;
-    border-radius: 10px;
+  flex: 1.5; /* takes roughly half the width */
+  min-width: 400px; /* prevent it from getting too small */
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .project-info {
-    flex: 1;               /* text takes roughly half the width */
-    min-width: 250px;
+  flex: 1; /* text takes roughly half the width */
+  min-width: 250px;
 }
 
 .project-info h3 {
-    color: #00ffcc;
-    margin-bottom: 1rem;
-    text-align: left;
+  color: #00ffcc;
+  margin-bottom: 1rem;
+  text-align: left;
 }
 
 .project-info p {
-    line-height: 1.6;
-    text-align: left;
+  line-height: 1.6;
+  text-align: left;
 }
 
 .project-info a :hover {
@@ -242,46 +236,50 @@ section {
 }
 
 .project-info p i {
-    color: #ffffff; /* light pink */
-    font-size: 1.5rem; /* larger size only for icons */
+  color: #ffffff; /* light pink */
+  font-size: 1.5rem; /* larger size only for icons */
 }
 
 .carousel-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel-slide {
-    min-width: 100%;
-    box-sizing: border-box;
+  min-width: 100%;
+  box-sizing: border-box;
 }
 
 .carousel-slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 .prev,
 .next {
-    position: absolute; /* stay inside carousel */
-    top: 50%;           /* vertical center */
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
-    font-size: 2rem;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    z-index: 2;          /* above images */
+  position: absolute; /* stay inside carousel */
+  top: 50%; /* vertical center */
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 2; /* above images */
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
 
 .prev:hover,
 .next:hover {
-    background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
